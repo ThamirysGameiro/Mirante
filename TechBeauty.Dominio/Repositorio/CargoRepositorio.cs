@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using TechBeauty.Dominio.Modelo;
 
@@ -23,9 +24,14 @@ namespace TechBeauty.Dominio.Repositorio
             TabelaCargo.FirstOrDefault(x => x.Id == id).Alterar(nome, descricao);
         }
 
-        public Cargo PegarCargo(int id)
+        public Cargo SelecionarPorId(int id) 
         {
             return TabelaCargo.FirstOrDefault(x => x.Id == id);
+        }
+
+        public void Excluir(int id) 
+        {
+            TabelaCargo.Remove(SelecionarPorId(id));
         }
 
         private void PreencherDados()
