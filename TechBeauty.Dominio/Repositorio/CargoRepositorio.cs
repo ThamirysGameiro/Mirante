@@ -5,7 +5,7 @@ using TechBeauty.Dominio.Modelo;
 
 namespace TechBeauty.Dominio.Repositorio
 {
-    public class CargoRepositorio
+    public class CargoRepositorio 
     {
         public List<Cargo> TabelaCargo { get; set; } = new List<Cargo>();
 
